@@ -25,23 +25,41 @@ public class LoginPage extends BasePage {
     String baseURL = "https://www.saucedemo.com/";
 
     //*********Web Elements by using Page Factory*********
-    @FindBy(how = How.ID, using = "user-name")
+//    @FindBy(how = How.ID, using = "user-name")
+//    public WebElement username;
+
+    @FindBy(how = How.ID, using = "txtEmail ")
     public WebElement username;
 
-    @FindBy(how = How.ID, using = "password")
+//    @FindBy(how = How.ID, using = "password")
+//    public WebElement password;
+
+    @FindBy(how = How.ID, using = "txtPassword")
     public WebElement password;
 
-    @FindBy(how = How.ID, using = "login-button")
+//    @FindBy(how = How.ID, using = "login-button")
+//    public WebElement loginButton;
+
+    @FindBy(how = How.ID, using = "btnLogin")
     public WebElement loginButton;
 
-    @FindBy(how = How.CSS, using = ".error-message-container.error")
+//    @FindBy(how = How.CSS, using = ".error-message-container.error")
+//    public WebElement errorMessageUsername;
+
+    @FindBy(how = How.CSS, using = "lblEmailErr")
     public WebElement errorMessageUsername;
 
-    @FindBy(how = How.CSS, using = ".error-message-container.error")
+//    @FindBy(how = How.CSS, using = ".error-message-container.error")
+//    public WebElement errorMessagePassword;
+
+    @FindBy(how = How.CSS, using = "lblPasswordErr")
     public WebElement errorMessagePassword;
 
     @FindBy(how = How.CSS, using = ".header_secondary_container .title")
     public WebElement homepageTitle;
+
+    @FindBy(how = How.CSS, using = "lblLoggedinSuccessfully")
+    public WebElement successMessageLogin;
 
     //*********Page Methods*********
     //Go to LoginPage

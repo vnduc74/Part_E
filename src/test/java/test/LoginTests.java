@@ -16,7 +16,8 @@ public class LoginTests extends BaseTest {
                 goToLoginPage().loginToSwagLabs("duc.vo@s3corp.com.vn", "1231234");
 
         //*************ASSERTIONS***********************
-        page.GetInstance(LoginPage.class).verifyLoginPassword(("Epic sadface: Username and password do not match any user in this service"));
+//        page.GetInstance(LoginPage.class).verifyLoginPassword(("Epic sadface: Username and password do not match any user in this service"));
+        page.GetInstance(LoginPage.class).verifyLoginPassword(("The inputted email or password is not correct."));
     }
 
     @Test (priority = 1)
@@ -29,7 +30,7 @@ public class LoginTests extends BaseTest {
         page.GetInstance(LoginPage.class).goToLoginPage().loginToSwagLabs("standard_user","secret_sauce");
 
         //*************ASSERTIONS***********************
-        page.GetInstance(LoginPage.class).verifyLoginSuccess("PRODUCTS");
+        page.GetInstance(LoginPage.class).verifyLoginSuccess("You have logged-in successfully!.");
     }
 
 }
